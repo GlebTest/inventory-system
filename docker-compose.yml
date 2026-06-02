@@ -9,8 +9,8 @@ services:
     volumes:
       - pb_data:/pb/pb_data
     environment:
-      - ADMIN_EMAIL=admin@pocketbase.local
-      - ADMIN_PASSWORD=securepassword123
+      - ADMIN_EMAIL=admin@test.com
+      - ADMIN_PASSWORD=admin123456
     networks:
       - inventory_net
     restart: unless-stopped
