@@ -5,7 +5,7 @@ services:
     image: pocketbase/pocketbase:0.22.12
     container_name: inventory_pocketbase
     ports:
-      - "80:80"
+      - "3000:3000"
     volumes:
       - pb_data:/pb/pb_data
     environment:
@@ -15,7 +15,7 @@ services:
       - inventory_net
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8090/api/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
       interval: 30s
       timeout: 10s
       retries: 3
