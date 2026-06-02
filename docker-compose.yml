@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
   pocketbase:
-    image: ghcr.io/pocketbase/pocketbase:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: inventory_pocketbase
     ports:
       - "8090:8090"

@@ -7,3 +7,4 @@ build/
 *.log
 pb_migrations/
 pb_public/
+/pocketbase_app
