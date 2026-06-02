@@ -2,9 +2,7 @@ version: '3.8'
 
 services:
   pocketbase:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: nouchka/pocketbase:latest
     container_name: inventory_pocketbase
     ports:
       - "8090:8090"
