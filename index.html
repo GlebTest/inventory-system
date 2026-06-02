@@ -489,7 +489,10 @@
         import PocketBase from 'https://cdn.jsdelivr.net/npm/pocketbase@latest/dist/pocketbase.es.mjs';
 
         // Инициализация
-        const pbUrl = 'http://localhost:8090';
+        // Используй переменную окружения или значение по умолчанию
+        const pbUrl = window.location.origin.includes('localhost') 
+            ? 'http://localhost:8080' 
+            : '${VITE_POCKETBASE_URL}' || window.location.protocol + '//' + window.location.hostname + ':8080';
         const pb = new PocketBase(pbUrl);
 
         let currentRole = 'admin';
