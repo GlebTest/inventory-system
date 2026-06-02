@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Система Инвентаризации</title>
+    <script>
+        // PocketBase URL из переменной окружения Coolify
+        window.POCKETBASE_URL = process.env.VITE_POCKETBASE_URL || 'http://localhost:8090';
+    </script>
     <style>
         * {
             margin: 0;
@@ -489,10 +493,7 @@
         import PocketBase from 'https://cdn.jsdelivr.net/npm/pocketbase@latest/dist/pocketbase.es.mjs';
 
         // Инициализация
-        // PocketBase URL - использует переменную окружения или автоматический порт 8080
-        const pbUrl = window.location.origin.includes('localhost') 
-            ? 'http://localhost:8080' 
-            : (window.location.origin.replace(':80', ':8080').replace(':443', ':8080'));
+        const pbUrl = window.POCKETBASE_URL || 'http://localhost:8090';
         const pb = new PocketBase(pbUrl);
 
         let currentRole = 'admin';
