@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -24,7 +25,7 @@
             align-items: center;
             padding: 20px;
         }
-
+        
         .container {
             width: 100%;
             max-width: 500px;
@@ -33,35 +34,35 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             overflow: hidden;
         }
-
         /* === ЛОГИН ФОРМА === */
+        
         .login-screen {
             padding: 40px 30px;
             display: none;
         }
-
+        
         .login-screen.active {
             display: block;
         }
-
+        
         .login-screen h1 {
             text-align: center;
             color: #333;
             margin-bottom: 10px;
             font-size: 28px;
         }
-
+        
         .login-screen p {
             text-align: center;
             color: #999;
             margin-bottom: 30px;
             font-size: 14px;
         }
-
+        
         .form-group {
             margin-bottom: 20px;
         }
-
+        
         .form-group label {
             display: block;
             margin-bottom: 8px;
@@ -69,7 +70,7 @@
             font-weight: 600;
             font-size: 14px;
         }
-
+        
         .form-group input {
             width: 100%;
             padding: 12px;
@@ -78,18 +79,18 @@
             font-size: 14px;
             transition: border-color 0.3s;
         }
-
+        
         .form-group input:focus {
             outline: none;
             border-color: #667eea;
         }
-
+        
         .role-select {
             display: flex;
             gap: 10px;
             margin-bottom: 20px;
         }
-
+        
         .role-option {
             flex: 1;
             padding: 12px;
@@ -102,13 +103,13 @@
             background: white;
             color: #333;
         }
-
+        
         .role-option.selected {
             border-color: #667eea;
             background: #667eea;
             color: white;
         }
-
+        
         .btn {
             width: 100%;
             padding: 12px;
@@ -119,17 +120,17 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-
+        
         .btn-primary {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
-
+        
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
         }
-
+        
         .error {
             color: #e74c3c;
             margin-top: 10px;
@@ -139,23 +140,23 @@
             font-size: 14px;
             display: none;
         }
-
+        
         .error.show {
             display: block;
         }
-
         /* === ГЛАВНОЕ ПРИЛОЖЕНИЕ === */
+        
         .app-container {
             display: none;
         }
-
+        
         .app-container.active {
             display: flex;
             flex-direction: column;
             height: 100vh;
             background: #f5f5f5;
         }
-
+        
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -165,18 +166,18 @@
             align-items: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
+        
         .header h1 {
             font-size: 24px;
         }
-
+        
         .header-info {
             display: flex;
             gap: 20px;
             align-items: center;
             font-size: 14px;
         }
-
+        
         .btn-logout {
             background: rgba(255, 255, 255, 0.2);
             color: white;
@@ -186,17 +187,17 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-
+        
         .btn-logout:hover {
             background: rgba(255, 255, 255, 0.3);
         }
-
+        
         .content {
             flex: 1;
             overflow-y: auto;
             padding: 20px;
         }
-
+        
         .card {
             background: white;
             border-radius: 8px;
@@ -207,29 +208,29 @@
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .card-info {
             flex: 1;
         }
-
+        
         .card-info h3 {
             color: #333;
             margin-bottom: 5px;
             font-size: 16px;
         }
-
+        
         .card-info p {
             color: #999;
             font-size: 13px;
             margin: 3px 0;
         }
-
+        
         .card-actions {
             display: flex;
             gap: 10px;
             margin-left: 15px;
         }
-
+        
         .btn-small {
             padding: 8px 12px;
             border: none;
@@ -239,35 +240,35 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-
+        
         .btn-use {
             background: #27ae60;
             color: white;
         }
-
+        
         .btn-use:hover {
             background: #229954;
         }
-
+        
         .btn-delete {
             background: #e74c3c;
             color: white;
         }
-
+        
         .btn-delete:hover {
             background: #c0392b;
         }
-
+        
         .btn-add {
             background: #3498db;
             color: white;
         }
-
+        
         .btn-add:hover {
             background: #2980b9;
         }
-
         /* === МОДАЛЬНОЕ ОКНО === */
+        
         .modal {
             display: none;
             position: fixed;
@@ -280,11 +281,11 @@
             justify-content: center;
             align-items: center;
         }
-
+        
         .modal.active {
             display: flex;
         }
-
+        
         .modal-content {
             background: white;
             padding: 30px;
@@ -293,19 +294,19 @@
             max-width: 400px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
         }
-
+        
         .modal-content h2 {
             margin-bottom: 20px;
             color: #333;
             font-size: 20px;
         }
-
+        
         .modal-footer {
             display: flex;
             gap: 10px;
             margin-top: 20px;
         }
-
+        
         .btn-cancel {
             flex: 1;
             background: #bdc3c7;
@@ -317,37 +318,37 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-
+        
         .btn-cancel:hover {
             background: #95a5a6;
         }
-
+        
         .btn-submit {
             flex: 1;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
-
+        
         .btn-submit:hover {
             transform: translateY(-2px);
         }
-
+        
         .empty-state {
             text-align: center;
             padding: 40px 20px;
             color: #999;
         }
-
+        
         .empty-state p {
             font-size: 16px;
         }
-
+        
         .loading {
             text-align: center;
             padding: 40px 20px;
             color: #667eea;
         }
-
+        
         .spinner {
             display: inline-block;
             width: 30px;
@@ -357,19 +358,23 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
-
+        
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
-
+        
         .stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
             margin-bottom: 20px;
         }
-
+        
         .stat-card {
             background: white;
             padding: 15px;
@@ -377,20 +382,21 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
+        
         .stat-card .number {
             font-size: 28px;
             font-weight: bold;
             color: #667eea;
             margin-bottom: 5px;
         }
-
+        
         .stat-card .label {
             font-size: 12px;
             color: #999;
         }
     </style>
 </head>
+
 <body>
     <!-- ЛОГИН ФОРМА -->
     <div class="login-screen active" id="loginScreen">
@@ -490,258 +496,57 @@
     </div>
 
     <script type="module">
-        import PocketBase from 'https://cdn.jsdelivr.net/npm/pocketbase@latest/dist/pocketbase.es.mjs';
-
-        // Инициализация
-        const pbUrl = window.POCKETBASE_URL || 'http://localhost:8090';
-        const pb = new PocketBase(pbUrl);
-
-        let currentRole = 'admin';
-        let currentUser = null;
-
-        // === DOM ЭЛЕМЕНТЫ ===
-        const loginScreen = document.getElementById('loginScreen');
-        const appContainer = document.getElementById('appContainer');
-        const loginEmail = document.getElementById('loginEmail');
-        const loginPassword = document.getElementById('loginPassword');
-        const loginBtn = document.getElementById('loginBtn');
-        const logoutBtn = document.getElementById('logoutBtn');
-        const loginError = document.getElementById('loginError');
-        const userInfo = document.getElementById('userInfo');
-
-        const addModal = document.getElementById('addModal');
-        const addEquipmentBtn = document.getElementById('addEquipmentBtn');
-        const equipmentName = document.getElementById('equipmentName');
-        const equipmentDescription = document.getElementById('equipmentDescription');
-        const submitBtn = document.getElementById('submitBtn');
-
-        const adminView = document.getElementById('adminView');
-        const workerView = document.getElementById('workerView');
-        const equipmentList = document.getElementById('equipmentList');
-        const workerEquipmentList = document.getElementById('workerEquipmentList');
-
-        // === РОЛЕВАЯ СИСТЕМА ===
-        document.querySelectorAll('.role-option').forEach(option => {
-            option.addEventListener('click', function() {
-                document.querySelectorAll('.role-option').forEach(o => o.classList.remove('selected'));
-                this.classList.add('selected');
-                currentRole = this.getAttribute('data-role');
-            });
-        });
-
-        // === ЛОГИН/РЕГИСТРАЦИЯ ===
-        loginBtn.addEventListener('click', async () => {
-            const email = loginEmail.value.trim();
-            const password = loginPassword.value.trim();
-
-            if (!email || !password) {
-                showError('Заполни все поля', loginError);
-                return;
-            }
-
-            try {
-                loginBtn.disabled = true;
-                loginBtn.textContent = 'Загрузка...';
-
-                try {
-                    // Попытка входа
-                    await pb.collection('users').authWithPassword(email, password);
-                } catch (e) {
-                    // Если нет пользователя, создаём
-                    if (e.status === 400) {
-                        const record = await pb.collection('users').create({
-                            email: email,
-                            password: password,
-                            passwordConfirm: password,
-                            role: currentRole
-                        });
-                        await pb.collection('users').authWithPassword(email, password);
-                    } else {
-                        throw e;
-                    }
-                }
-
-                currentUser = pb.authStore.model;
-                showApp();
-            } catch (error) {
-                showError('Ошибка: ' + error.message, loginError);
-            } finally {
-                loginBtn.disabled = false;
-                loginBtn.textContent = 'Вход / Регистрация';
-            }
-        });
-
-        // === ВЫХОД ===
-        logoutBtn.addEventListener('click', () => {
-            pb.authStore.clear();
-            currentUser = null;
-            loginEmail.value = '';
-            loginPassword.value = '';
-            loginError.classList.remove('show');
-            showLogin();
-        });
-
-        // === ПЕРЕКЛЮЧЕНИЕ ИНТЕРФЕЙСОВ ===
-        function showLogin() {
-            loginScreen.style.display = 'block';
-            appContainer.classList.remove('active');
-        }
-
-        function showApp() {
-            loginScreen.style.display = 'none';
-            appContainer.classList.add('active');
-            userInfo.textContent = `${currentUser.email} (${currentUser.role})`;
-
-            if (currentUser.role === 'admin') {
-                adminView.style.display = 'block';
-                workerView.style.display = 'none';
-                loadAdminView();
-            } else {
-                adminView.style.display = 'none';
-                workerView.style.display = 'block';
-                loadWorkerView();
-            }
-        }
-
-        // === АДМИН ПАНЕЛЬ ===
-        addEquipmentBtn.addEventListener('click', () => {
-            addModal.classList.add('active');
-        });
-
-        submitBtn.addEventListener('click', async () => {
-            const name = equipmentName.value.trim();
-            const desc = equipmentDescription.value.trim();
-
-            if (!name) {
-                alert('Введи название оборудования');
-                return;
-            }
-
-            try {
-                await pb.collection('equipment').create({
-                    name: name,
-                    description: desc,
-                    created_by: currentUser.id
-                });
-
-                closeModal();
-                equipmentName.value = '';
-                equipmentDescription.value = '';
-                loadAdminView();
-            } catch (error) {
-                alert('Ошибка: ' + error.message);
-            }
-        });
-
-        async function loadAdminView() {
-            try {
-                const records = await pb.collection('equipment').getFullList();
-                const usageCount = await pb.collection('usage').getFullList();
-
-                document.getElementById('totalEquipment').textContent = records.length;
-                document.getElementById('usageCount').textContent = usageCount.length;
-
-                equipmentList.innerHTML = records.length === 0 ? 
-                    '<div class="empty-state"><p>Нет оборудования. Добавь первое!</p></div>' : '';
-
-                records.forEach(item => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                        <div class="card-info">
-                            <h3>${item.name}</h3>
-                            <p>${item.description || 'Нет описания'}</p>
-                            <p style="color: #667eea; font-size: 12px; margin-top: 8px;">ID: ${item.id.substring(0, 8)}</p>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn-small btn-delete" onclick="deleteEquipment('${item.id}')">Удалить</button>
-                        </div>
-                    `;
-                    equipmentList.appendChild(card);
-                });
-            } catch (error) {
-                equipmentList.innerHTML = `<div class="empty-state"><p>Ошибка загрузки: ${error.message}</p></div>`;
-            }
-        }
-
-        // === ВИД СОТРУДНИКА ===
-        async function loadWorkerView() {
-            try {
-                const equipment = await pb.collection('equipment').getFullList();
-                const myUsage = await pb.collection('usage').getFullList({
-                    filter: `used_by = "${currentUser.id}"`
-                });
-
-                document.getElementById('workerEquipmentCount').textContent = equipment.length;
-                document.getElementById('workerUsageCount').textContent = myUsage.length;
-
-                workerEquipmentList.innerHTML = equipment.length === 0 ? 
-                    '<div class="empty-state"><p>Нет доступного оборудования</p></div>' : '';
-
-                equipment.forEach(item => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                        <div class="card-info">
-                            <h3>${item.name}</h3>
-                            <p>${item.description || 'Нет описания'}</p>
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn-small btn-use" onclick="markUsage('${item.id}')">Отметить использование</button>
-                        </div>
-                    `;
-                    workerEquipmentList.appendChild(card);
-                });
-            } catch (error) {
-                workerEquipmentList.innerHTML = `<div class="empty-state"><p>Ошибка: ${error.message}</p></div>`;
-            }
-        }
-
-        // === ГЛОБАЛЬНЫЕ ФУНКЦИИ ===
-        window.closeModal = () => {
-            addModal.classList.remove('active');
-        };
-
-        window.deleteEquipment = async (id) => {
-            if (confirm('Уверен? Это удалит все использования этого оборудования')) {
-                try {
-                    await pb.collection('equipment').delete(id);
-                    loadAdminView();
-                } catch (error) {
-                    alert('Ошибка: ' + error.message);
-                }
-            }
-        };
-
-        window.markUsage = async (equipmentId) => {
-            try {
-                await pb.collection('usage').create({
-                    equipment: equipmentId,
-                    used_by: currentUser.id,
-                    used_at: new Date().toISOString()
-                });
-                alert('✅ Использование отмечено!');
-                loadWorkerView();
-            } catch (error) {
-                alert('Ошибка: ' + error.message);
-            }
-        };
-
-        function showError(message, element) {
-            element.textContent = message;
-            element.classList.add('show');
-            setTimeout(() => {
-                element.classList.remove('show');
-            }, 5000);
-        }
-
-        // === ПРОВЕРКА АВТОРИЗАЦИИ ===
-        if (pb.authStore.isValid) {
-            currentUser = pb.authStore.model;
-            showApp();
-        } else {
-            showLogin();
-        }
+        import PocketBase from 'https://cdn.jsdelivr.net/npm/pocketbase@latest/dist/pocketbase.es.mjs'; // Инициализация const pbUrl = window.POCKETBASE_URL || 'http://g34m5sxfrcfrdvv816xus8s6.176.112.158.3.sslip.io:8080'; const pb = new PocketBase(pbUrl); let
+        currentRole = 'admin'; let currentUser = null; // === DOM ЭЛЕМЕНТЫ === const loginScreen = document.getElementById('loginScreen'); const appContainer = document.getElementById('appContainer'); const loginEmail = document.getElementById('loginEmail');
+        const loginPassword = document.getElementById('loginPassword'); const loginBtn = document.getElementById('loginBtn'); const logoutBtn = document.getElementById('logoutBtn'); const loginError = document.getElementById('loginError'); const userInfo
+        = document.getElementById('userInfo'); const addModal = document.getElementById('addModal'); const addEquipmentBtn = document.getElementById('addEquipmentBtn'); const equipmentName = document.getElementById('equipmentName'); const equipmentDescription
+        = document.getElementById('equipmentDescription'); const submitBtn = document.getElementById('submitBtn'); const adminView = document.getElementById('adminView'); const workerView = document.getElementById('workerView'); const equipmentList =
+        document.getElementById('equipmentList'); const workerEquipmentList = document.getElementById('workerEquipmentList'); // === РОЛЕВАЯ СИСТЕМА === document.querySelectorAll('.role-option').forEach(option => { option.addEventListener('click', function()
+        { document.querySelectorAll('.role-option').forEach(o => o.classList.remove('selected')); this.classList.add('selected'); currentRole = this.getAttribute('data-role'); }); }); // === ЛОГИН/РЕГИСТРАЦИЯ === loginBtn.addEventListener('click', async
+        () => { const email = loginEmail.value.trim(); const password = loginPassword.value.trim(); if (!email || !password) { showError('Заполни все поля', loginError); return; } try { loginBtn.disabled = true; loginBtn.textContent = 'Загрузка...'; try
+        { // Попытка входа await pb.collection('users').authWithPassword(email, password); } catch (e) { // Если нет пользователя, создаём if (e.status === 400) { const record = await pb.collection('users').create({ email: email, password: password, passwordConfirm:
+        password, role: currentRole }); await pb.collection('users').authWithPassword(email, password); } else { throw e; } } currentUser = pb.authStore.model; showApp(); } catch (error) { showError('Ошибка: ' + error.message, loginError); } finally {
+        loginBtn.disabled = false; loginBtn.textContent = 'Вход / Регистрация'; } }); // === ВЫХОД === logoutBtn.addEventListener('click', () => { pb.authStore.clear(); currentUser = null; loginEmail.value = ''; loginPassword.value = ''; loginError.classList.remove('show');
+        showLogin(); }); // === ПЕРЕКЛЮЧЕНИЕ ИНТЕРФЕЙСОВ === function showLogin() { loginScreen.style.display = 'block'; appContainer.classList.remove('active'); } function showApp() { loginScreen.style.display = 'none'; appContainer.classList.add('active');
+        userInfo.textContent = `${currentUser.email} (${currentUser.role})`; if (currentUser.role === 'admin') { adminView.style.display = 'block'; workerView.style.display = 'none'; loadAdminView(); } else { adminView.style.display = 'none'; workerView.style.display
+        = 'block'; loadWorkerView(); } } // === АДМИН ПАНЕЛЬ === addEquipmentBtn.addEventListener('click', () => { addModal.classList.add('active'); }); submitBtn.addEventListener('click', async () => { const name = equipmentName.value.trim(); const desc
+        = equipmentDescription.value.trim(); if (!name) { alert('Введи название оборудования'); return; } try { await pb.collection('equipment').create({ name: name, description: desc, created_by: currentUser.id }); closeModal(); equipmentName.value =
+        ''; equipmentDescription.value = ''; loadAdminView(); } catch (error) { alert('Ошибка: ' + error.message); } }); async function loadAdminView() { try { const records = await pb.collection('equipment').getFullList(); const usageCount = await pb.collection('usage').getFullList();
+        document.getElementById('totalEquipment').textContent = records.length; document.getElementById('usageCount').textContent = usageCount.length; equipmentList.innerHTML = records.length === 0 ? '
+        <div class="empty-state">
+            <p>Нет оборудования. Добавь первое!</p>
+        </div>' : ''; records.forEach(item => { const card = document.createElement('div'); card.className = 'card'; card.innerHTML = `
+        <div class="card-info">
+            <h3>${item.name}</h3>
+            <p>${item.description || 'Нет описания'}</p>
+            <p style="color: #667eea; font-size: 12px; margin-top: 8px;">ID: ${item.id.substring(0, 8)}</p>
+        </div>
+        <div class="card-actions">
+            <button class="btn-small btn-delete" onclick="deleteEquipment('${item.id}')">Удалить</button>
+        </div>
+        `; equipmentList.appendChild(card); }); } catch (error) { equipmentList.innerHTML = `
+        <div class="empty-state">
+            <p>Ошибка загрузки: ${error.message}</p>
+        </div>`; } } // === ВИД СОТРУДНИКА === async function loadWorkerView() { try { const equipment = await pb.collection('equipment').getFullList(); const myUsage = await pb.collection('usage').getFullList({ filter: `used_by = "${currentUser.id}"` }); document.getElementById('workerEquipmentCount').textContent
+        = equipment.length; document.getElementById('workerUsageCount').textContent = myUsage.length; workerEquipmentList.innerHTML = equipment.length === 0 ? '
+        <div class="empty-state">
+            <p>Нет доступного оборудования</p>
+        </div>' : ''; equipment.forEach(item => { const card = document.createElement('div'); card.className = 'card'; card.innerHTML = `
+        <div class="card-info">
+            <h3>${item.name}</h3>
+            <p>${item.description || 'Нет описания'}</p>
+        </div>
+        <div class="card-actions">
+            <button class="btn-small btn-use" onclick="markUsage('${item.id}')">Отметить использование</button>
+        </div>
+        `; workerEquipmentList.appendChild(card); }); } catch (error) { workerEquipmentList.innerHTML = `
+        <div class="empty-state">
+            <p>Ошибка: ${error.message}</p>
+        </div>`; } } // === ГЛОБАЛЬНЫЕ ФУНКЦИИ === window.closeModal = () => { addModal.classList.remove('active'); }; window.deleteEquipment = async (id) => { if (confirm('Уверен? Это удалит все использования этого оборудования')) { try { await pb.collection('equipment').delete(id);
+        loadAdminView(); } catch (error) { alert('Ошибка: ' + error.message); } } }; window.markUsage = async (equipmentId) => { try { await pb.collection('usage').create({ equipment: equipmentId, used_by: currentUser.id, used_at: new Date().toISOString()
+        }); alert('✅ Использование отмечено!'); loadWorkerView(); } catch (error) { alert('Ошибка: ' + error.message); } }; function showError(message, element) { element.textContent = message; element.classList.add('show'); setTimeout(() => { element.classList.remove('show');
+        }, 5000); } // === ПРОВЕРКА АВТОРИЗАЦИИ === if (pb.authStore.isValid) { currentUser = pb.authStore.model; showApp(); } else { showLogin(); }
     </script>
 </body>
+
 </html>
