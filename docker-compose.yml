@@ -2,13 +2,11 @@ version: '3.8'
 
 services:
   web:
-    image: node:alpine
+    image: python:3.11-alpine
     working_dir: /app
     volumes:
       - ./:/app
     ports:
-      - "80:3000"
-    command: npx -y http-server . -p 3000
-    environment:
-      - VITE_POCKETBASE_URL=${VITE_POCKETBASE_URL:-http://localhost:8090}
+      - "80:80"
+    command: python -m http.server 80
     restart: unless-stopped
