@@ -5,7 +5,7 @@ services:
     image: pocketbase/pocketbase:0.22.12
     container_name: inventory_pocketbase
     ports:
-      - "8090:8090"
+      - "80:80"
     volumes:
       - pb_data:/pb/pb_data
     environment:
