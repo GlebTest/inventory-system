@@ -84,19 +84,11 @@
 
 **На вкладке "API Rules":**
 
-```
-Create Rule:
-@request.auth.role = "admin"
-
-Read Rule:
-@request.auth.verified = true
-
-Update Rule:
-@request.auth.role = "admin"
-
-Delete Rule:
-@request.auth.role = "admin"
-```
+*   **List/Search:** `@request.auth.id != ""` (Все вошедшие пользователи)
+*   **View:** `@request.auth.id != ""`
+*   **Create:** `@request.auth.role = "admin"` (Только админ)
+*   **Update:** `@request.auth.role = "admin"` (Только админ)
+*   **Delete:** `@request.auth.role = "admin"` (Только админ)
 
 ---
 
@@ -116,36 +108,15 @@ Delete Rule:
 | used_by | Relation | ✅ |
 | used_at | DateTime | ✅ |
 
-**Для поля "equipment":**
-- Связь: equipment (Max records: 1)
-
-**Для поля "used_by":**
-- Связь: users (Max records: 1)
-
-**Для поля "used_at":**
-- Тип: DateTime
-- Auto Update Now: ✅
-
 ### 4.3 Настрой API правила
 
 **На вкладке "API Rules":**
 
-```
-Create Rule:
-@request.auth.verified = true
-
-Read Rule (Admin видит всё, Worker видит свои):
-@request.auth.role = "admin" || @request.auth.id = used_by.id
-
-List Rule:
-@request.auth.role = "admin" || @request.auth.id = used_by.id
-
-Delete Rule:
-@request.auth.role = "admin"
-
-Update Rule:
-❌ (запретить)
-```
+*   **List/Search:** `@request.auth.role = "admin" || @request.auth.id = used_by` (Админ видит всё, работник — своё)
+*   **View:** `@request.auth.role = "admin" || @request.auth.id = used_by`
+*   **Create:** `@request.auth.id != ""` (Любой вошедший)
+*   **Update:** `❌ (Оставь пустым/запрещено)`
+*   **Delete:** `@request.auth.role = "admin"` (Только админ)
 
 ---
 
